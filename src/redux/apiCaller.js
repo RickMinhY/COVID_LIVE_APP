@@ -6,11 +6,11 @@ export var callApi = function (endpoint, method = 'GET', body) {
         method: method,
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json,charset=utf-8',
+            'Content-Type': 'application/json',
         },
         url: `${endpoint}`,
         data: body
     }).catch(err => {
-        
+
     });
 };

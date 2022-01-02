@@ -12,15 +12,15 @@ import ThemeOptions from "../../Layout/ThemeOptions/";
 
 const RequestForm = ({ match }) => (
   <Fragment>
-    <ThemeOptions />
+    {/* <ThemeOptions /> */}
     <AppHeader />
-    <div className="app-main" style={{backgroundColor:"#fff"}}>
+    <div className="app-main" style={{ backgroundColor: "#fff" }}>
       {/* <AppSidebar /> */}
-        <div className="app-main__inner">
-          <Route path={`${match.url}/Vacxin`} component={VacxinForm}/>
-          <Route path={`${match.url}/HealthDeclaration`} component={HealthDeclaration}/>
-        </div>
-        {/* <AppFooter /> */}
+      <div className="app-main__inner">
+        <Route path={`${match.url}/Vacxin`} component={VacxinForm} />
+        <Route path={`${match.url}/HealthDeclaration`} component={HealthDeclaration} />
+      </div>
+      {/* <AppFooter /> */}
     </div>
   </Fragment>
 );

@@ -5,10 +5,10 @@ import { API_ROUTE } from '../../redux/constant';
 
 
 export function getSummaryData() {
-    return function(dispatch){
+    return function (dispatch) {
         return callApi(`${API_ROUTE.URL_GET_SUMMARY}`, 'GET').then(res => {
             if (res && res.data) {
-                dispatch({type: Types.GET_SUMMARY, data: res.data[0]});
+                dispatch({ type: Types.GET_SUMMARY, data: res.data });
             } else {
                 toastErrorText(res.statusText);
             }
