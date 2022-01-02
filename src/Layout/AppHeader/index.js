@@ -4,15 +4,17 @@ import cx from "classnames";
 import { connect } from "react-redux";
 
 import CSSTransitionGroup from "react-transition-group/CSSTransitionGroup";
-
-import HeaderLogo from "../AppLogo";
-
-import SearchBox from "./Components/SearchBox";
-import MegaMenu from "./Components/MegaMenu";
-import UserBox from "./Components/UserBox";
-import HeaderRightDrawer from "./Components/HeaderRightDrawer";
-
-import HeaderDots from "./Components/HeaderDots";
+import {
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardTitle,
+  Nav,
+  NavItem,
+  NavLink,
+  Container,
+} from "reactstrap";
 
 class Header extends React.Component {
   render() {
@@ -31,20 +33,24 @@ class Header extends React.Component {
           transitionEnter={false} transitionLeave={false}>
           {/* <HeaderLogo /> */}
           <div className={cx("app-header__content", {
-              "header-mobile-open": enableMobileMenuSmall,
-            })}>
-              <h4 className="font-weight-bold" style={{color: "#ffdf0e"}}>
-              CỔNG THÔNG TIN COVID-19 VIỆT NAM
+            "header-mobile-open": enableMobileMenuSmall,
+          })}>
+            <a href="/">
+              <h4 className="font-weight-bold" style={{ color: "#ffdf0e" }}>
+                CỔNG THÔNG TIN COVID-19 VIỆT NAM
               </h4>
-            {/* <div className="app-header-left">
-              <SearchBox />
-              <MegaMenu />
-            </div> */}
-            {/* <div className="app-header-right"> */}
-              {/* <HeaderDots /> */}
-              {/* <UserBox /> */}
-              {/* <HeaderRightDrawer /> */}
-            {/* </div> */}
+            </a>
+
+            <div className="app-header-right">
+              <Nav>
+                <NavLink active href="#/RequestForm/HealthDeclaration" className="text-light">
+                  Tờ khai Y tế
+                </NavLink>
+                <NavLink href="#/RequestForm/Vacxin" className="text-light">
+                  Tờ khai Vắc-xin
+                </NavLink>
+              </Nav>
+            </div>
           </div>
         </CSSTransitionGroup>
       </Fragment>
