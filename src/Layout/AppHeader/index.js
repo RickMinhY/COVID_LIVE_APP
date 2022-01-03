@@ -49,6 +49,9 @@ class Header extends React.Component {
                 <NavLink href="#/RequestForm/Vacxin" className="text-light">
                   Tờ khai Vắc-xin
                 </NavLink>
+                <NavLink href="#/VacxinPassport" className="text-light">
+                  Tra cứu tiêm chủng
+                </NavLink>
               </Nav>
             </div>
           </div>

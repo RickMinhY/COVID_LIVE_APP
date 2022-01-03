@@ -12,5 +12,6 @@ export const API_ROUTE = {
     // URL_GET_SUMMARY:'https://vaccovid.live/api/npm-covid-data/country-report-iso-based/Vietnam/VNM'
     URL_GET_SUMMARY: 'http://localhost:3001/summary',
     URL_SUBMIT_DECLARATION: 'http://localhost:3002/declaration/submit',
-    URL_SUBMIT_VACXIN: 'http://localhost:3002/vaccination/submit'
+    URL_SUBMIT_VACXIN: 'http://localhost:3002/vaccination/submit',
+    URL_GET_VACXIN: 'http://localhost:3002/vaccinations/'
 };

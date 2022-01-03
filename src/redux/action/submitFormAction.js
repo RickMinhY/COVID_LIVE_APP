@@ -35,3 +35,17 @@ export function submitDeclarationAction(data) {
         });
     }
 }
+
+export function getVacxinDetailAction(IdNo) {
+    return function (dispatch) {
+        dispatch({ type: Types.GET_VACXIN_LOADING })
+        return callApi(`${API_ROUTE.URL_GET_VACXIN}${IdNo}`, 'GET').then(res => {
+            if (res && res.data) {
+                dispatch({ type: Types.GET_VACXIN, data: res.data });
+            } else {
+                toastErrorText(MESSAGE.GET_FAILURE);
+                dispatch({ type: Types.GET_VACXIN, data: [] });
+            }
+        });
+    }
+}

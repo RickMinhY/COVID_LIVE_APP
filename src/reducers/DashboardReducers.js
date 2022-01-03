@@ -1,7 +1,7 @@
 import * as Types from '../../src/redux/actionType';
 
 var initialState = {
-    summaryData:{},
+    summaryData: {},
     isLoading: false,
 };
 
