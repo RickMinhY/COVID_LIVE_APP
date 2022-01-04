@@ -8,11 +8,13 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
-COPY package.json ./
+COPY ["package.json", "package-lock.json*", "./"]
 
-COPY package-lock.json ./
 
-RUN npm install --save --legacy-peer-deps
+
+RUN apk update && apk add --no-cache --virtual .gyp python2 make g++
+
+RUN npm install --production
 
 # add app
 COPY . ./
