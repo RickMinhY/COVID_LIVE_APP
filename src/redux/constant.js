@@ -1,3 +1,4 @@
+const { REACT_APP_URL_GET_SUMMARY, REACT_APP_URL_SUBMIT_DECLARATION, REACT_APP_URL_SUBMIT_VACXIN, REACT_APP_URL_GET_VACXIN } = process.env
 export const API_ENPOINT = 'https://localhost:44317/api';
 
 
@@ -10,8 +11,8 @@ export const MESSAGE = {
 
 export const API_ROUTE = {
     // URL_GET_SUMMARY:'https://vaccovid.live/api/npm-covid-data/country-report-iso-based/Vietnam/VNM'
-    URL_GET_SUMMARY: 'http://localhost:3001/summary',
-    URL_SUBMIT_DECLARATION: 'http://localhost:3002/declaration/submit',
-    URL_SUBMIT_VACXIN: 'http://localhost:3002/vaccination/submit',
-    URL_GET_VACXIN: 'http://localhost:3002/vaccinations/'
+    URL_GET_SUMMARY: REACT_APP_URL_GET_SUMMARY,
+    URL_SUBMIT_DECLARATION: REACT_APP_URL_SUBMIT_DECLARATION,
+    URL_SUBMIT_VACXIN: REACT_APP_URL_SUBMIT_VACXIN,
+    URL_GET_VACXIN: REACT_APP_URL_GET_VACXIN
 };

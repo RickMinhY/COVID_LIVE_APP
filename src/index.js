@@ -1,7 +1,6 @@
 import "./polyfills";
 import React from "react";
 import ReactDOM from "react-dom";
-
 import * as serviceWorker from "./serviceWorker";
 
 import { HashRouter } from "react-router-dom";
@@ -29,6 +28,7 @@ renderApp(Main);
 if (module.hot) {
   module.hot.accept("./DemoPages/Main", () => {
     const NextApp = require("./DemoPages/Main").default;
+    require('dotenv').config()
     renderApp(NextApp);
   });
 }
